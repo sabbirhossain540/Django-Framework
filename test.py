@@ -18,3 +18,10 @@ python manage.py runserver
 
 //Create a Django application
 python manage.py startapp first_app
+
+
+#Model Activity
+python manage.py migrate
+python manage.py makemigrations first_app
+
+python manage.py createsuperuser
