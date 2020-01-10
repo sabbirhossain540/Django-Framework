@@ -3,12 +3,34 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Django Guater Oage</title>
+    <title>Django Level Two</title>
     <link rel="stylesheet" href="{% static "css/mystyle.css" %}">
   </head>
   <body>
-    <h1>Hi, This is a picture of dhango himself</h1>
-    {{ insert_me }}
-    <img src="{% static "images/download.png" %}" alt="xyz">
+      <h1>Welcome to Django Level Two</h1>
+      <h2>Here Your Access Record:</h2>
+
+      <div class="djangotwo">
+        {% if access_records %}
+          <table>
+            <thead>
+              <th>Site Name</th>
+              <th>Date Accessed</th>
+            </thead>
+            {% for acc in access_records %}
+            <tr>
+              <td>{{ acc.name }}</td>
+              <td>{{ acc.date }}</td>
+            </tr>
+            {% endfor %}
+          </table>
+         {% else %}
+          <p>No Accessrecod Found</p>
+         {% endif %}
+
+
+
+
+      </div>
   </body>
 </html>
