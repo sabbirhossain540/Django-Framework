@@ -22,4 +22,5 @@ urlpatterns = [
     url(r'^$',views.index,name = 'index'),
     url(r'^mynewextension/',include('first_app.urls')),
     url(r'^admin/', admin.site.urls),
+    url(r'^formpage/',views.form_name_view,name='form_name')
 ]
