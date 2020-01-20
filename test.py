@@ -24,6 +24,7 @@ python manage.py startapp first_app
 pip install Faker
 pip install bcrypt #Using For Password Hashing
 pip install django[argon2] #Using For Password Hashing
+pip install pillow #Using for Image Upload
 
 #Model Activity
 python manage.py migrate
